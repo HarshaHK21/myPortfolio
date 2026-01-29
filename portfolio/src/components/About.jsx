@@ -37,18 +37,6 @@ export function About() {
             ABOUT
           </h2>
           
-          <div className="mb-6">
-            <p 
-              className="text-lg mb-4"
-              style={{ 
-                color: '#7DA0CA',
-                fontFamily: 'Inter, system-ui, sans-serif'
-              }}
-            >
-              harshahk288@gmail.com
-            </p>
-          </div>
-
           <div className="space-y-4">
             <p 
               className="text-base leading-relaxed"
@@ -57,9 +45,7 @@ export function About() {
                 fontFamily: 'Inter, system-ui, sans-serif'
               }}
             >
-              Passionate IT undergraduate student at BCI Campus Negombo with a strong foundation 
-              in modern web technologies, programming fundamentals, and software development principles. 
-              Eager to apply academic knowledge in real-world projects.
+              I am a motivated Information Technology undergraduate reading for my BSc (Hons) at BCI Campus, Sri Lanka. My focus is on Software Engineering, where I am passionate about designing, developing, and maintaining efficient, scalable, and reliable software solutions.
             </p>
             
             <p 
@@ -69,28 +55,23 @@ export function About() {
                 fontFamily: 'Inter, system-ui, sans-serif'
               }}
             >
-              Currently seeking internship opportunities to gain hands-on experience in full-stack 
-              development. My greatest strength is quick learning and adaptability, which enables me 
-              to tackle new technologies and contribute effectively to development teams.
+              Beyond standard web development, I have a deep interest in emerging technologies such as Artificial Intelligence and Machine Learning (AI/ML). I am currently seeking an internship opportunity to apply my skills in full-stack development, software quality assurance (QA), and data science to build robust, user-focused systems.
             </p>
           </div>
 
-          <div className="pt-6">
+          <div className="pt-6 space-y-2">
             <p 
-              className="text-sm"
-              style={{ 
-                color: '#7DA0CA',
-                fontFamily: 'Inter, system-ui, sans-serif'
-              }}
+              className="text-sm font-medium"
+              style={{ color: '#7DA0CA', fontFamily: 'Inter, system-ui, sans-serif' }}
             >
-              Negombo, Sri Lanka<br />
-              BCI Campus Student
+              📍 Location: Negombo / Walapane, Sri Lanka
             </p>
-          </div>
-
-          <div className="flex items-center space-x-2 pt-4">
-            <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-            <span style={{ color: '#C1E8FF' }}>Seeking internship opportunities</span>
+             <p 
+              className="text-sm font-medium"
+              style={{ color: '#7DA0CA', fontFamily: 'Inter, system-ui, sans-serif' }}
+            >
+              ✉️ Email: harshahk288@gmail.com
+            </p>
           </div>
         </div>
 
