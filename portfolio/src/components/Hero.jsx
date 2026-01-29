@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import backgroundImage from '../assets/hero-image.jpg'; 
-import { FaLinkedin, FaInstagram, FaBehance, FaPinterest, FaTwitter, FaSkype } from 'react-icons/fa';
+import { FaLinkedin, FaInstagram, FaBehance, FaPinterest, FaTwitter, FaSkype, FaGithub } from 'react-icons/fa';
+import cvPDF from '../assets/Harsha -cv.pdf';
 
 export function Hero() {
   const titles = ['Full Stack Developer', 'UI/UX Designer', 'IT Undergraduate Student'];
@@ -25,7 +26,7 @@ export function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
-          src={backgroundImage} // Replace with your background image path
+          src={backgroundImage}
           alt="Modern workspace"
           className="w-full h-full object-cover"
         />
@@ -42,7 +43,7 @@ export function Hero() {
             <a href="#about" className="hover:opacity-80 transition-opacity" style={{ color: '#C1E8FF' }}>
               About
             </a>
-            <a href="#resume" className="hover:opacity-80 transition-opacity" style={{ color: '#C1E8FF' }}>
+            <a href="#Resume" className="hover:opacity-80 transition-opacity" style={{ color: '#C1E8FF' }}>
               Resume
             </a>
             <a href="#portfolio" className="hover:opacity-80 transition-opacity" style={{ color: '#C1E8FF' }}>
@@ -57,7 +58,8 @@ export function Hero() {
       </nav>
 
       {/* Hero Content */}
-      <div className="relative z-10 text-center px-6"> <br />
+      <div className="relative z-10 text-center px-6"> 
+        <br />
         <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /><br /> <br /> <br />  
         {/* <h1 
           className="text-6xl md:text-8xl font-bold mb-4 tracking-tight"
@@ -68,7 +70,7 @@ export function Hero() {
         >
           HARSHA<br />
           KARUNARATHNA
-        </h1> */}
+        </h1> */} 
         <div className="h-16 flex items-center justify-center mb-8">
           <p 
             className={`text-xl md:text-2xl tracking-wide transition-all duration-500 ${
@@ -84,7 +86,8 @@ export function Hero() {
         </div>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <button a href="#resume"
+          <button 
+            onClick={() => window.location.href = '#resume'}
             className="px-8 py-3 rounded-lg border-2 transition-all duration-300 hover:scale-105"
             style={{ 
               borderColor: '#5483B3',
@@ -94,39 +97,49 @@ export function Hero() {
           >
             Resume
           </button>
-          <button a href="#portfolio"
+          <button 
+            onClick={() => {
+              const pdfUrl = cvPDF;
+              const link = document.createElement('a');
+              link.href = pdfUrl;
+              link.download = 'Harsha-CV.pdf';
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }}
             className="px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105"
             style={{ 
               backgroundColor: '#5483B3',
-              color: '#021024'
+              color: '#021024' 
             }}
           >
-            Portfolio
-          </button>
-        </div>
+            Download CV
+          </button> <br />
 
         {/* Social Icons */}
         <div className="flex justify-center space-x-6">
           {[
-            { name: 'Behance', IconComponent: FaBehance, url: '#' },
             { name: 'LinkedIn', IconComponent: FaLinkedin, url: 'https://www.linkedin.com/in/harsha-karunarathna-a67915213/' },
-            { name: 'Instagram', IconComponent: FaInstagram, url: '#' },
-            { name: 'Pinterest', IconComponent: FaPinterest, url: '#' },
-            { name: 'Twitter', IconComponent: FaTwitter, url: '#' },
-            { name: 'Skype', IconComponent: FaSkype, url: '#' }
+            { name: 'Instagram', IconComponent: FaInstagram, url: 'https://www.facebook.com/profile.php?id=100089794230249&mibextid=ZbWKwL' },
+            { name: 'Pinterest', IconComponent: FaPinterest, url: 'https://pinterest.com' },
+            { name: 'Twitter', IconComponent: FaTwitter, url: 'https://twitter.com' },
+            { name: 'Github', IconComponent: FaGithub, url: 'https://github.com/harshaHK21' }
           ].map((social) => (
             <a
               key={social.name}
-              href="#"
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 rounded-full flex items-center justify-center border transition-all duration-300 hover:scale-110"
               style={{ 
                 borderColor: '#5483B3',
                 color: '#7DA0CA'
               }}
             >
-              <span className="text-sm">{social.icon}</span>
+              <social.IconComponent className="text-xl" />
             </a>
           ))}
+        </div>
         </div>
       </div>
     </section>

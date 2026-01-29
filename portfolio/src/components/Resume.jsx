@@ -1,6 +1,7 @@
 import React from 'react';
 
 export function Resume() {
+  
   const softwareSkills = [
     { name: 'React', level: 95 },
     { name: 'Node.js', level: 90 },
@@ -184,8 +185,8 @@ export function Resume() {
                 {
                   year: '2024',
                   name: 'E-Commerce Web Platform',
-                  tech: 'React, Node.js, MongoDB',
-                  description: 'Full-stack e-commerce platform with user authentication, payment integration, and admin dashboard',
+                  tech: 'HTML, CSS, JS, PHP, MySQL',
+                  description: 'Full-stack e-commerce platform with user authentication, and admin dashboard',
                   color: '#5483B3',
                   image: 'https://images.unsplash.com/photo-1742072594003-abf6ca86e154?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMGNvZGluZyUyMHNjcmVlbnxlbnwxfHx8fDE3NTc3NDAwNjB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
                 },
