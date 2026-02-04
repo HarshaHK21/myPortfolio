@@ -4,7 +4,7 @@ import { Float, Stars, Cloud } from '@react-three/drei';
 
 export default function ThreeDScene() {
   return (
-    <div className="absolute inset-0 z-0 bg-[#021024]" style={{ background: 'radial-gradient(circle at center, #052659 0%, #021024 100%)' }}>
+    <div className="absolute inset-0 z-0" style={{ backgroundColor: '#021024', background: 'radial-gradient(circle at center, #052659 0%, #021024 100%)' }}>
       <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
          {/* Fog to blend edges into the dark background - adjusted color to match gradient edge */}
         <fog attach="fog" args={['#021024', 5, 20]} />

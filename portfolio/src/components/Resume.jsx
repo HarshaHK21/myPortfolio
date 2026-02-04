@@ -124,7 +124,7 @@ export function Resume() {
               </h3>
               <ul className="space-y-3">
                 {softSkills.map((skill) => (
-                  <li key={skill} className="flex items-center space-x-3 text-[#C1E8FF]">
+                  <li key={skill} className="flex items-center space-x-3 text-white">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#5483B3]"></span>
                     <span>{skill}</span>
                   </li>
@@ -153,12 +153,12 @@ export function Resume() {
                     }}
                   >
                     <div className="flex justify-between items-start mb-4">
-                        <h4 className="text-xl font-bold group-hover:text-[#5483B3] transition-colors" style={{ color: '#C1E8FF' }}>{project.name}</h4>
+                        <h4 className="text-xl font-bold group-hover:text-[#5483B3] transition-colors" style={{ color: '#ffffff' }}>{project.name}</h4>
                         <span className="text-xs px-2 py-1 rounded bg-[#5483B3]/20 text-[#7DA0CA] border border-[#5483B3]/30">
                             {project.tech}
                         </span>
                     </div>
-                    <p className="text-[#C1E8FF]/80 mb-4 leading-relaxed text-sm">
+                    <p className="text-white/80 mb-4 leading-relaxed text-sm">
                         {project.description}
                     </p>
                     
